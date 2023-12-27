@@ -1,8 +1,11 @@
 module.exports = {
   extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:sonarjs/recommended",
-    "semistandard",
-    "standard",
+    'plugin:sonarjs/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'semistandard'
   ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  root: true,
+  ignorePatterns:  ["**/public"]
 };

@@ -1,6 +1,6 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
-
-export default function JSONHandler (req: VercelRequest, res: VercelResponse) {
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function JSONHandler (req, res) {
   switch (req.method) {
     case 'GET': {
       res.statusCode = 200;
@@ -26,3 +26,4 @@ export default function JSONHandler (req: VercelRequest, res: VercelResponse) {
     }
   }
 }
+exports.default = JSONHandler;

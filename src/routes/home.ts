@@ -1,9 +1,21 @@
-import express from "express";
+import { Router, Request, Response } from 'express'
 
-const router = express.Router()
+const router = Router()
 
-router.get("/", (req,res) =>{
-    res.send("hui")
+router.get("/", (req: Request, res: Response) => {
+    res.json({ message: "GET request received" })
 })
 
-export default router
+router.post("/", (req: Request, res: Response) => {
+    res.json({ message: "POST request received" })
+})
+
+router.put("/", (req: Request, res: Response) => {
+    res.json({ message: "PUT request received" })
+})
+
+router.delete("/", (req: Request, res: Response) => {
+    res.json({ message: "DELETE request received" })
+})
+
+export default router;

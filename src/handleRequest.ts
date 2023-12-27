@@ -4,7 +4,6 @@ import { JSONHandler } from './routeHandlers/JSONHandler'
 import { XMLHandler } from './routeHandlers/XMLHandler'
 
 export function handleRequest (req: VercelRequest, res: VercelResponse, pathname: string) {
-
   switch (pathname) {
     case '/':
       IndexHandler(req, res)

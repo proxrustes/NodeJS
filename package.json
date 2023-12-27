@@ -5,7 +5,9 @@
   "main": ".eslintrc.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
+  "ts.check": "tsc --project tsconfig.json",
+  "add-build": "git add dist",
     "start": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
@@ -37,6 +39,7 @@
     "eslint-plugin-sonarjs": "^0.23.0",
     "husky": "^8.0.3",
     "prettier": "3.1.1",
+    "rimraf": "^5.0.5",
     "sonarlint": "^1.1.0",
     "typescript": "^5.3.3"
   },

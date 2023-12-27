@@ -1,10 +1,6 @@
-import express from 'express'
+import { VercelRequest, VercelResponse } from '@vercel/node'
+import handleRequest from './api/router/router'
 
-const app = express()
-const port = process.env.PORT || 3000
-
-app.use(express.static('public'))
-
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`)
-})
+export default function (req: VercelRequest, res: VercelResponse) {
+  handleRequest(req, res)
+}

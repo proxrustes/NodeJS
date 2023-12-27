@@ -5,6 +5,10 @@ const port = process.env.PORT || 3000
 
 app.use(express.static('public'))
 
+app.get('/', (req, res) => {
+  res.send("What's up doc ?!")
+})
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`)
 })

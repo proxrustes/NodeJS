@@ -1,5 +1,4 @@
-import express, { Request, Response } from 'express'
-import home from "./routes/home"
+import express from 'express'
 import apiRoutes from './routes/api';
 import path from 'path';
 
@@ -15,8 +14,9 @@ app.get('/', (req, res) => {
 app.get('/api', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/api-description.html'));
 });
-app.use("/", home)
+
 app.use('/api', apiRoutes);
+
 app.listen(port, () => {
   return console.log(`Server is listening on ${port}`)
 })

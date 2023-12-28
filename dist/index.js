@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const home_1 = __importDefault(require("./routes/home"));
 const api_1 = __importDefault(require("./routes/api"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
@@ -17,7 +16,6 @@ app.get('/', (req, res) => {
 app.get('/api', (req, res) => {
     res.sendFile(path_1.default.join(__dirname, 'public/api-description.html'));
 });
-app.use("/", home_1.default);
 app.use('/api', api_1.default);
 app.listen(port, () => {
     return console.log(`Server is listening on ${port}`);

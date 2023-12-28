@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const apiUtils_1 = require("../lib/apiUtils");
+const apiUtils_1 = require("../../lib/apiUtils");
 const router = (0, express_1.Router)();
 router.get("/", (req, res) => {
     res.json({ message: "GET request received" });

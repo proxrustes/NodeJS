@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express'
-import { getBody } from '../lib/apiUtils';
+import { getBody } from '../../lib/apiUtils';
 
 const router = Router()
 

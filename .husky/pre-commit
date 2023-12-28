@@ -3,6 +3,7 @@
 
 npm run ts.check
 npm run build
+cp -R src/public/ dist/
 npm run add-build
 
 

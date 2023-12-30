@@ -1,39 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>API Description</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
     <div class="container">
-    <h1>API Endpoints</h1>
+      <h2>API Endpoints</h2>
 
-    <div class="tab">
-      <button class="tablinks" onclick="openEndpoint(event, 'JSON')">JSON</button>
-      <button class="tablinks" onclick="openEndpoint(event, 'XML')">XML</button>
-      <button class="tablinks" onclick="openEndpoint(event, 'TODO')">TODO</button>
+      <div class="tab">
+        <button class="tablinks" onclick="openEndpoint(event, 'JSON')">
+          JSON
+        </button>
+        <button class="tablinks" onclick="openEndpoint(event, 'XML')">
+          XML
+        </button>
+        <button class="tablinks" onclick="openEndpoint(event, 'TODO')">
+          TODO
+        </button>
+      </div>
+
+      <div id="JSON" class="tabcontent">
+        <h3>JSON Endpoint</h3>
+        <p>GET <span class="api-link">/api/json</span> - ---</p>
+        <p>POST <span class="api-link">/api/json</span> - ---</p>
+      </div>
+
+      <div id="XML" class="tabcontent"> 
+        <h3>XML Endpoint</h3>
+        <p>Description of the XML endpoint.</p>
+      </div>
+
+      <div id="TODO" class="tabcontent">
+        <h3>TODO Endpoint</h3>
+        <p>TODO</p>
+      </div>
     </div>
-
-    <div id="JSON" class="tabcontent">
-      <h3>JSON Endpoint</h3>
-      <p><strong>GET /api/json</strong> - ---</p>
-      <p><strong>POST /api/json</strong> - ---</p>
-    </div>
-
-    <div id="XML" class="tabcontent">
-      <h3>XML Endpoint</h3>
-      <p>Description of the XML endpoint.</p>
-    </div>
-
-    <div id="TODO" class="tabcontent">
-      <h3>TODO Endpoint</h3>
-      <p>TODO</p>
-    </div>
-
-        
-</div>
     <script src="./js/script.js"></script>
-
-</body>
+  </body>
 </html>

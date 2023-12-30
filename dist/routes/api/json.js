@@ -16,21 +16,39 @@ router.get("/", (req, res) => {
     res.json({ message: "GET request received" });
 });
 router.post("/", (req, res) => {
-    if (req.is('json')) {
+    if (req.is("json")) {
         processJsonData(req, res);
     }
     else {
         res.status(400).send("Invalid content type. Please send JSON.");
     }
 });
+router.delete("/user/:userId", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const userId = req.params.userId;
+    res.status(200).json({ message: `User data for user ${userId} deleted successfully` });
+    res.status(404).json({ message: "User not found" });
+}));
+router.options("/", (req, res) => {
+    res.setHeader("Allow", "GET, POST, DELETE, OPTIONS");
+    res.status(204).send();
+});
+router.patch("/user/:userId", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const userId = req.params.userId;
+    const updateData = req.body;
+    res.status(200).json({ message: "User data updated successfully", updatedData: { userId, updateData } });
+}));
 exports.default = router;
 function processJsonData(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const userData = yield (0, apiUtils_1.getBody)(req);
         if (!userData.name || !userData.email) {
-            return res.status(400).json({ message: "Missing name or email in user data." });
+            return res
+                .status(400)
+                .json({ message: "Missing name or email in user data." });
         }
-        res.status(200).json({ message: "User data processed successfully", userData });
+        res
+            .status(200)
+            .json({ message: "User data processed successfully", userData });
     });
 }
 //# sourceMappingURL=json.js.map

@@ -12,6 +12,13 @@ h1 {
   color: #333;
   margin-bottom: 0;
 }
+h2 {
+  font-size: 60px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 0;
+}
+
 h6{
     
   color: #33333380;
@@ -30,13 +37,13 @@ a{
     font-weight: 600;
 padding: 4px 14px 4px 14px;
   border-radius: 10px;
-  background-color: #333;
+  background-color: #464;
   color:aliceblue;
   transition: all .2s ease-in-out;
 }
 
 a:hover{
-    background-color: #1b1b1b;
+  background-color: rgb(45, 58, 45);
     color:aliceblue;
 }
 
@@ -72,3 +79,13 @@ a:hover{
     border-top: none;
   }
   
+  p{
+    font-weight: 600;
+  }
+
+  .api-link{
+    background-color: rgb(245, 185, 204);
+    border-radius: 10px;
+    padding: 0 6px 0 6px;
+    color:#4b1325
+  }

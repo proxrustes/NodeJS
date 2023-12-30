@@ -1,11 +1,12 @@
 import express from 'express'
-import apiRoutes from './routes/api';
+import apiRoutes from './routes/api/index';
 import path from 'path';
+var xmlparser = require('express-xml-bodyparser');
 
 const app = express()
 const port = process.env.PORT || 8080
 app.use(express.static(path.join(__dirname, 'public')))
-
+app.use(xmlparser());
 app.use(express.json())
 
 app.get('/', (req, res) => {

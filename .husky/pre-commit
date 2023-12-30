@@ -1,9 +1,27 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Run linters and formatters
+npm run lint:fix .
+npm run format:fix .
+
+# Add any changes made by the linters and formatters
+git add .
+
+# Run TypeScript check and build
 npm run ts.check
 npm run build
+
+# Copy necessary files
 cp -R src/public/ dist/
+
+# Add any changes made by the build process
+git add .
+
+# If there are changes, amend the commit
+if ! git diff --staged --quiet; then
+  git commit --amend --no-edit
+fi
+
+# Your additional build steps
 npm run add-build
-
-

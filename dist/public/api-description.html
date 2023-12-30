@@ -16,29 +16,39 @@
         <button class="tablinks" onclick="openEndpoint(event, 'XML')">
           XML
         </button>
-        <button class="tablinks" onclick="openEndpoint(event, 'TODO')">
-          TODO
-        </button>
       </div>
 
       <div id="JSON" class="tabcontent">
         <h3>JSON Endpoint</h3>
 
         <p>
-          <strong><span class="api-link get-method">GET</span> /api/json</strong> -
-          Retrieves a list of items in JSON format.
-        </p>
-
-        <p>
-          <strong><span class="api-link post-method">POST</span> /api/json</strong> - Adds a
-          new item.
-          <br />
-          <code>{ "name": "John Doe", "email": "johndoe@example.com" } </code>
+          <strong
+            ><span class="api-link get-method">GET</span> /api/json</strong
+          >
+          - Retrieves a list of items in JSON format.
         </p>
 
         <p>
           <strong
-            ><span class="api-link patch-tag">PATCH</span> /api/json/user/:userId</strong
+            ><span class="api-link post-method">POST</span> /api/json</strong
+          >
+          - Adds a new item.
+          <br />
+          <code>{ "name": "John Doe", "email": "johndoe@example.com" } </code>
+        </p>
+        <p>
+          <strong>
+            <span class="api-link delete-method">DELETE</span>
+            /api/json/user/:userId</strong
+          >
+
+          - Deletes the user data for the specified user ID.
+        </p>
+
+        <p>
+          <strong
+            ><span class="api-link patch-tag">PATCH</span>
+            /api/json/user/:userId</strong
           >
           - Updates specified fields of a user's data.
           <br />
@@ -50,27 +60,63 @@
 
         <p>
           <strong>
-            <span class="api-link delete-method">DELETE</span> /api/json/user/:userId</strong
+            <span class="api-link options-methos">OPTIONS</span>
+            /api/json</strong
           >
-
-          - Deletes the user data for the specified user ID.
-        </p>
-
-        <p>
-          <strong> <span class="api-link options-methos">OPTIONS</span> /api/json</strong> -
-          Provides information about the HTTP methods supported by the /api/json
-          endpoint.
+          - Provides information about the HTTP methods supported by the
+          /api/json endpoint.
         </p>
       </div>
 
       <div id="XML" class="tabcontent">
         <h3>XML Endpoint</h3>
-        <p>Description of the XML endpoint.</p>
-      </div>
 
-      <div id="TODO" class="tabcontent">
-        <h3>TODO Endpoint</h3>
-        <p>TODO</p>
+        <p>
+          <strong><span class="api-link get-method">GET</span> /api/xml</strong>
+          - Retrieves data in XML format.
+        </p>
+
+        <p>
+          <strong
+            ><span class="api-link post-method">POST</span> /api/xml</strong
+          >
+          - Receives XML data.
+          <br />
+          <code>
+            &lt;user&gt; &lt;name&gt;John Doe&lt;/name&gt;
+            &lt;email&gt;johndoe@example.com&lt;/email&gt; &lt;/user&gt;
+          </code>
+        </p>
+
+        <p>
+          <strong
+            ><span class="api-link delete-method">DELETE</span>
+            /api/xml/user/:userId</strong
+          >
+          - Deletes the user data for the specified user ID.
+        </p>
+
+        <p>
+          <strong
+            ><span class="api-link patch-tag">PATCH</span>
+            /api/xml/user/:userId</strong
+          >
+          - Updates specified fields of a user's data in XML format.
+          <br />
+          <code>
+            &lt;user&gt; &lt;name&gt;Updated Name&lt;/name&gt;
+            &lt;email&gt;updated.email@example.com&lt;/email&gt; &lt;/user&gt;
+          </code>
+        </p>
+
+        <p>
+          <strong
+            ><span class="api-link options-methos">OPTIONS</span>
+            /api/xml</strong
+          >
+          - Provides information about the HTTP methods supported by the
+          /api/xml endpoint.
+        </p>
       </div>
     </div>
     <script src="./js/script.js"></script>

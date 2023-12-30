@@ -25,7 +25,9 @@ router.post("/", (req, res) => {
 });
 router.delete("/user/:userId", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const userId = req.params.userId;
-    res.status(200).json({ message: `User data for user ${userId} deleted successfully` });
+    res
+        .status(200)
+        .json({ message: `User data for user ${userId} deleted successfully` });
     res.status(404).json({ message: "User not found" });
 }));
 router.options("/", (req, res) => {
@@ -35,7 +37,10 @@ router.options("/", (req, res) => {
 router.patch("/user/:userId", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const userId = req.params.userId;
     const updateData = req.body;
-    res.status(200).json({ message: "User data updated successfully", updatedData: { userId, updateData } });
+    res.status(200).json({
+        message: "User data updated successfully",
+        updatedData: { userId, updateData },
+    });
 }));
 exports.default = router;
 function processJsonData(req, res) {

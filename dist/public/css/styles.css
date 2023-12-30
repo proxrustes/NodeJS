@@ -78,14 +78,37 @@ a:hover{
     border: 1px solid #ccc;
     border-top: none;
   }
-  
-  p{
-    font-weight: 600;
-  }
+
 
   .api-link{
     background-color: rgb(245, 185, 204);
     border-radius: 10px;
     padding: 0 6px 0 6px;
-    color:#4b1325
+    color:#4b1325;
+    font-weight: 800;
   }
+
+  .api-link.get-method {
+    background-color: #8fbc8f; 
+    color: white;
+}
+
+.api-link.post-method {
+    background-color: #ffa07a; 
+    color: white;
+}
+
+.api-link.patch-tag {
+    background-color: #569cb4; 
+    color: white;
+}
+
+.api-link.delete-method {
+    background-color: #f08080; 
+    color: white;
+}
+
+.api-link.options-methos {
+    background-color: #ffd700;
+    color: white;
+}

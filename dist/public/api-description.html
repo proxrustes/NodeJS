@@ -23,11 +23,47 @@
 
       <div id="JSON" class="tabcontent">
         <h3>JSON Endpoint</h3>
-        <p>GET <span class="api-link">/api/json</span> - ---</p>
-        <p>POST <span class="api-link">/api/json</span> - ---</p>
+
+        <p>
+          <strong><span class="api-link get-method">GET</span> /api/json</strong> -
+          Retrieves a list of items in JSON format.
+        </p>
+
+        <p>
+          <strong><span class="api-link post-method">POST</span> /api/json</strong> - Adds a
+          new item.
+          <br />
+          <code>{ "name": "John Doe", "email": "johndoe@example.com" } </code>
+        </p>
+
+        <p>
+          <strong
+            ><span class="api-link patch-tag">PATCH</span> /api/json/user/:userId</strong
+          >
+          - Updates specified fields of a user's data.
+          <br />
+          <code
+            >{ "name": "Updated Name", "email": "updated.email@example.com"
+            }</code
+          >
+        </p>
+
+        <p>
+          <strong>
+            <span class="api-link delete-method">DELETE</span> /api/json/user/:userId</strong
+          >
+
+          - Deletes the user data for the specified user ID.
+        </p>
+
+        <p>
+          <strong> <span class="api-link options-methos">OPTIONS</span> /api/json</strong> -
+          Provides information about the HTTP methods supported by the /api/json
+          endpoint.
+        </p>
       </div>
 
-      <div id="XML" class="tabcontent"> 
+      <div id="XML" class="tabcontent">
         <h3>XML Endpoint</h3>
         <p>Description of the XML endpoint.</p>
       </div>
